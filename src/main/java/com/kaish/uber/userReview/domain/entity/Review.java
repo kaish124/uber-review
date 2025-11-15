@@ -7,11 +7,11 @@ import lombok.*;
 @Getter
 @Setter
 @Table(name = "EM_BOOKING_REVIEW")
+@Inheritance(strategy = InheritanceType.JOINED)
 public class Review extends AbstractAuditableEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String content;
 
     private Double rating;

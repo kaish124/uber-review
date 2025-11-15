@@ -1,6 +1,6 @@
 package com.kaish.uber.userReview.service;
 
-import com.kaish.uber.userReview.domain.entity.Review;
+import com.kaish.uber.userReview.domain.entity.PassengerReview;
 import com.kaish.uber.userReview.repository.ReviewRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -17,11 +17,12 @@ public class ReviewService implements CommandLineRunner {
     }
     @Override
     public void run(String... args) throws Exception {
-        Review review = new Review();
-        review.setContent("good service");
-        review.setRating(4.3);
+        PassengerReview passengerReview = new PassengerReview();
+        passengerReview.setContent("good service");
+        passengerReview.setRating(4.3);
+        passengerReview.setPassengerReviewContent("sdflasdf ahsldf");
+        passengerReview.setPassengerReviewRating(3.4);
 
-        reviewRepository.save(review);
-
+        reviewRepository.save(passengerReview);
     }
 }

@@ -1,9 +1,9 @@
 package com.kaish.uber.userReview.repository;
 
-import com.kaish.uber.userReview.domain.entity.Review;
+import com.kaish.uber.userReview.domain.entity.Booking;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface ReviewRepository extends JpaRepository<Review, Long> {
+public interface BookingRepository extends JpaRepository<Booking, Long> {
 }

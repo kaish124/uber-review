@@ -1,5 +1,6 @@
 package com.kaish.uber.userReview.domain.entity;
 
+import com.kaish.uber.userReview.domain.embeddable.Name;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -16,9 +17,9 @@ public class AuditUser {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
-    private String firstName;
-    private String lastName;
-    private String preferredName;
+    @Embedded
+    private Name name;
+
     private String email;
 
     @Override

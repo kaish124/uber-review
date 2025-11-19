@@ -1,6 +1,6 @@
 package com.kaish.uber.userReview.domain.entity;
 
-import com.kaish.uber.userReview.domain.enums.BookingStatus;
+import com.kaish.uber.enums.BookingStatus;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
@@ -19,9 +19,6 @@ public class Booking extends AbstractAuditableEntity{
 
     @Enumerated(EnumType.STRING)
     private BookingStatus status;
-
-    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
-    private Review review;
 
     @ManyToOne
     private Passenger passenger;

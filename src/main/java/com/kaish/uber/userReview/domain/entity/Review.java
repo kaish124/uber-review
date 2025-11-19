@@ -16,6 +16,9 @@ public class Review extends AbstractAuditableEntity{
     private Long id;
     private String content;
 
+    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
+    private Booking booking;
+
     private Double rating;
 
     @ManyToOne

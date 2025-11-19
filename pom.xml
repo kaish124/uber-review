@@ -61,7 +61,26 @@
             <artifactId>guava</artifactId>
             <version>33.5.0-jre</version>
         </dependency>
-	</dependencies>
+
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-core</artifactId>
+            <version>11.17.0</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-database-postgresql</artifactId>
+            <version>11.17.0</version>
+            <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>com.kaish.uber</groupId>
+            <artifactId>UberCommon</artifactId>
+            <version>1.0.0-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
 
 	<build>
 		<plugins>
@@ -88,6 +107,13 @@
 						</exclude>
 					</excludes>
 				</configuration>
+<!--                <executions>-->
+<!--                    <execution>-->
+<!--                        <goals>-->
+<!--                            <goal>repackage</goal>-->
+<!--                        </goals>-->
+<!--                    </execution>-->
+<!--                </executions>-->
 			</plugin>
 		</plugins>
 	</build>

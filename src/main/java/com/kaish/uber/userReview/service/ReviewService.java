@@ -1,15 +1,15 @@
 package com.kaish.uber.userReview.service;
 
-import com.google.common.collect.Lists;
+import com.kaish.uber.enums.BookingStatus;
 import com.google.common.collect.Sets;
 import com.kaish.uber.userReview.domain.embeddable.Name;
 import com.kaish.uber.userReview.domain.entity.Booking;
 import com.kaish.uber.userReview.domain.entity.Driver;
 import com.kaish.uber.userReview.domain.entity.Review;
-import com.kaish.uber.userReview.domain.enums.BookingStatus;
 import com.kaish.uber.userReview.repository.BookingRepository;
 import com.kaish.uber.userReview.repository.DriverRepository;
 import com.kaish.uber.userReview.repository.ReviewRepository;
+import jakarta.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Service;
@@ -17,8 +17,10 @@ import org.springframework.stereotype.Service;
 import java.time.Duration;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
+import java.util.Set;
 
 @Service
+@Transactional
 public class ReviewService implements CommandLineRunner {
 
     private final ReviewRepository reviewRepository;
@@ -33,12 +35,16 @@ public class ReviewService implements CommandLineRunner {
     }
     @Override
     public void run(String... args) throws Exception {
+        createDriver();
+    }
+
+
+    private void createDriver() {
         Review review = new Review();
         review.setContent("good service");
         review.setRating(4.3);
 
         Booking booking = new Booking();
-        booking.setReview(review);
         booking.setStatus(BookingStatus.SCHEDULED);
         booking.setStartTime(Instant.now());
         booking.setEndTime(Instant.now().plus(30, ChronoUnit.MINUTES));
@@ -57,7 +63,7 @@ public class ReviewService implements CommandLineRunner {
         review.setDriver(driver);
         driver.getReviews().add(review);
 
-        driverRepository.save(driver);
+//        driverRepository.save(driver);
 
 //        bookingRepository.save(booking);
     }

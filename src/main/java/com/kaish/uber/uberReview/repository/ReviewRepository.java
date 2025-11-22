@@ -1,9 +1,13 @@
-package com.kaish.uber.userReview.repository;
+package com.kaish.uber.uberReview.repository;
 
-import com.kaish.uber.userReview.domain.entity.Review;
+import com.kaish.uber.uberReview.domain.entity.Review;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
+import java.util.Optional;
+
 @Repository
 public interface ReviewRepository extends JpaRepository<Review, Long> {
+
+    Optional<Review> findById(Long Id);
 }

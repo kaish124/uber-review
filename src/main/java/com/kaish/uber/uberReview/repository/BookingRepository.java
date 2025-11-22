@@ -1,6 +1,6 @@
-package com.kaish.uber.userReview.repository;
+package com.kaish.uber.uberReview.repository;
 
-import com.kaish.uber.userReview.domain.entity.Booking;
+import com.kaish.uber.uberReview.domain.entity.Booking;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 

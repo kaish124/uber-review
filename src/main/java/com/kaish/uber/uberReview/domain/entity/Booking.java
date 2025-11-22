@@ -1,4 +1,4 @@
-package com.kaish.uber.userReview.domain.entity;
+package com.kaish.uber.uberReview.domain.entity;
 
 import com.kaish.uber.enums.BookingStatus;
 import jakarta.persistence.*;

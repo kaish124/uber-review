@@ -1,4 +1,4 @@
-package com.kaish.uber.userReview.domain.entity;
+package com.kaish.uber.uberReview.domain.entity;
 
 import jakarta.persistence.*;
 import lombok.*;
@@ -16,7 +16,7 @@ public class Review extends AbstractAuditableEntity{
     private Long id;
     private String content;
 
-    @OneToOne(cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToOne
     private Booking booking;
 
     private Double rating;

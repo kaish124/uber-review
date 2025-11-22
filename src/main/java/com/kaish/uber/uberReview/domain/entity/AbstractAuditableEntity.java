@@ -1,4 +1,4 @@
-package com.kaish.uber.userReview.domain.entity;
+package com.kaish.uber.uberReview.domain.entity;
 
 import jakarta.persistence.EntityListeners;
 import jakarta.persistence.JoinColumn;

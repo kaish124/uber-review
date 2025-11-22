@@ -1,4 +1,4 @@
-package com.kaish.uber.userReview.domain.embeddable;
+package com.kaish.uber.uberReview.domain.embeddable;
 
 import jakarta.persistence.Embeddable;
 import lombok.*;

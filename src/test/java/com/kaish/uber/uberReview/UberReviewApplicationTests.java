@@ -1,10 +1,10 @@
-package com.kaish.uber.userReview;
+package com.kaish.uber.uberReview;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class UserReviewApplicationTests {
+class UberReviewApplicationTests {
 
 	@Test
 	void contextLoads() {

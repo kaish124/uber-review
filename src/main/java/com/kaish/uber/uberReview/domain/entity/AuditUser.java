@@ -1,6 +1,6 @@
-package com.kaish.uber.userReview.domain.entity;
+package com.kaish.uber.uberReview.domain.entity;
 
-import com.kaish.uber.userReview.domain.embeddable.Name;
+import com.kaish.uber.uberReview.domain.embeddable.Name;
 import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
